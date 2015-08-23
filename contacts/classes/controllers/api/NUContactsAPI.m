@@ -8,7 +8,7 @@
 
 #import "NUContactsAPI.h"
 
-NSString *NUContactsAPIBaseURL = @"https://s3-sa-east-1.amazonaws.com/mobile-challenge";
+NSString *NUContactsAPIBaseURL = @"https://raw.githubusercontent.com/dchohfi/cocoaheads-sp-contacts/master/";
 
 @implementation NUContactsAPI
 
