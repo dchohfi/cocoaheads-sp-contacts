@@ -14,8 +14,9 @@
 #import "SVProgressHUD.h"
 #import "MTLJSONAdapter.h"
 #import "UIImageView+AFNetworking.h"
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface NUContactsViewController()
+@interface NUContactsViewController()<MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *contacts;
 
@@ -36,19 +37,12 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"NUContactCell" bundle:nil]
          forCellReuseIdentifier:@"NUContactCell"];
     
-    [SVProgressHUD showWithStatus:@"Carregando contatos"];
-    [[NUContactsAPI sharedAPI] GET:@"people.json"
-                        parameters:nil
-                           success:^(NSURLSessionDataTask *task, id responseObject) {
-                               [SVProgressHUD showSuccessWithStatus:@"Contatos carregados :)"];
-                               NSArray *contactsData = responseObject[@"contacts"];
-                               
-                               self.contacts = [MTLJSONAdapter modelsOfClass:[NUPerson class]
-                                                               fromJSONArray:contactsData
-                                                                       error:nil];
-                           } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                               [SVProgressHUD showErrorWithStatus:@"Ops, tivemos um problema :("];
-                           }];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(loadContacts)
+                  forControlEvents:UIControlEventValueChanged];
+    
+    [self loadContacts];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -60,9 +54,9 @@
     NUContactCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NUContactCell"
                                                                forIndexPath:indexPath];
     
-    [cell.imageProfile setImageWithURL:person.image];
     cell.labelName.text = person.name;
     cell.labelEmail.text = person.email;
+    [cell.imageProfile setImageWithURL:person.image];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"dd/MM/yyyy";
@@ -72,6 +66,57 @@
     cell.labelDayOfBirthday.text = dayOfBirthday;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NUPerson *person = self.contacts[indexPath.row];
+    [self sendEmailToContact:person];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+    }];
+}
+
+#pragma mark - private methods
+
+- (void)sendEmailToContact:(NUPerson *)person {
+    MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+    mailComposer.mailComposeDelegate = self;
+    [mailComposer setSubject:@"Olar :)"];
+    [mailComposer setToRecipients:@[person.email]];
+    [mailComposer setMessageBody:@"\n\n\n\n\nEmail para nubank." isHTML:NO];
+    
+    [self presentViewController:mailComposer animated:YES completion:nil];
+}
+
+- (void)loadContacts {
+    self.contacts = [[NSArray alloc] init];
+    [SVProgressHUD showWithStatus:@"Carregando contatos"];
+    [[NUContactsAPI sharedAPI] GET:@"people.json"
+                        parameters:nil
+                           success:^(NSURLSessionDataTask *task, id responseObject) {
+                               [SVProgressHUD showSuccessWithStatus:@"Contatos carregados :)"];
+                               NSArray *contactsData = responseObject[@"contacts"];
+                               
+                               self.contacts = [MTLJSONAdapter modelsOfClass:[NUPerson class]
+                                                               fromJSONArray:contactsData
+                                                                       error:nil];
+                               [self.refreshControl endRefreshing];
+                           } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                               [SVProgressHUD showErrorWithStatus:@"Ops, tivemos um problema :("];
+                               [self.refreshControl endRefreshing];
+                           }];
+}
+
+#pragma mark - getter/setter
+
+- (void)setContacts:(NSArray *)contacts {
+    _contacts = contacts;
+    [self.tableView reloadData];
 }
 
 @end

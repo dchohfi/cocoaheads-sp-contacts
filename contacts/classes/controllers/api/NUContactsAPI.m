@@ -27,6 +27,11 @@ NSString *NUContactsAPIBaseURL = @"https://raw.githubusercontent.com/dchohfi/coc
     if (self) {
         self.requestSerializer = [AFJSONRequestSerializer serializer];
         self.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingMutableContainers];
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", nil];
+        NSURLCache *sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:0
+                                                                diskCapacity:0
+                                                                    diskPath:nil];
+        [NSURLCache setSharedURLCache:sharedCache];
     }
     
     return self;

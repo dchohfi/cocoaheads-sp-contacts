@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-contactsTests-KIF.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,47 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D61D8F817C06F6578BAB631</key>
+		<key>1186D3450BB75CCC909AA288</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EF3474B116217E0FA46CA51</key>
+		<key>1B65B926E35AE32904CB8535</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1438A1A7A844CB247DACBF58</key>
+		<key>25AD80C4C6C39A3E51AD072B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3065BD63E58A9F5031A6CB26</key>
+		<key>3081AA03EC563DB80AA165F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D23DEC9DC3D61070B8D3BE7</key>
+		<key>3261CBF554CD428C6536F309</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80ED1FF1A9FB4F4CD8FE64C7</key>
+		<key>47C82C6A321C7C45AA60D628</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A14A14FDC19AF5FFBE76298C</key>
+		<key>59CE1E6F846E47B2A8D90B07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF017EFE39E3F7EDCF2580E6</key>
+		<key>76AA243174037473E34A9DDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2F75CDA17D3473F203EA24D</key>
+		<key>A12ABA685DCD828EC8272CE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B3287F4E8B16352B802C0463</key>
 		<dict>
 			<key>primary</key>
 			<true/>

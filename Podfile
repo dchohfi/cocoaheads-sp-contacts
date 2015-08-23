@@ -7,6 +7,7 @@ inhibit_all_warnings!
 pod 'AFNetworking', '~> 2.6'
 pod 'Mantle', '~> 2.0'
 pod 'SVProgressHUD', '~> 1.1'
+pod 'SVPullToRefresh', '~> 0.4'
 
 target 'contactsTests', :exclusive => true do
   pod 'OCMock', '~> 3.1', :configurations => ['Debug']

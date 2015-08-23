@@ -17,6 +17,7 @@
 		20F8A7371B8A6F8900316821 /* NUPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7361B8A6F8900316821 /* NUPerson.m */; };
 		20F8A73A1B8A736E00316821 /* NUContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7391B8A736E00316821 /* NUContactCell.m */; };
 		20F8A73C1B8A737900316821 /* NUContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F8A73B1B8A737900316821 /* NUContactCell.xib */; };
+		20F8A7401B8A89CC00316821 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F8A73F1B8A89CC00316821 /* MessageUI.framework */; };
 		EB465894594387D7BC8A654F /* libPods-contactsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B125C9A8E3407D247898EC /* libPods-contactsTests.a */; };
 		F8F3A805F71D7D47512C85DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C96837F4F000F50BEC6A4F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		20F8A7381B8A736E00316821 /* NUContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUContactCell.h; sourceTree = "<group>"; };
 		20F8A7391B8A736E00316821 /* NUContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactCell.m; sourceTree = "<group>"; };
 		20F8A73B1B8A737900316821 /* NUContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NUContactCell.xib; sourceTree = "<group>"; };
+		20F8A73D1B8A89C600316821 /* libAWDProtobufFacetimeiMessage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufFacetimeiMessage.dylib; path = usr/lib/libAWDProtobufFacetimeiMessage.dylib; sourceTree = SDKROOT; };
+		20F8A73F1B8A89CC00316821 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		30C96837F4F000F50BEC6A4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5960EA84FC5689006AB3FE74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6EB7B13660097CFBB9285BA4 /* Pods-contactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactsTests/Pods-contactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F8A7401B8A89CC00316821 /* MessageUI.framework in Frameworks */,
 				F8F3A805F71D7D47512C85DF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +209,8 @@
 		74CBE2197A584C7EBF722443 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20F8A73F1B8A89CC00316821 /* MessageUI.framework */,
+				20F8A73D1B8A89C600316821 /* libAWDProtobufFacetimeiMessage.dylib */,
 				30C96837F4F000F50BEC6A4F /* libPods.a */,
 				D8B125C9A8E3407D247898EC /* libPods-contactsTests.a */,
 			);
