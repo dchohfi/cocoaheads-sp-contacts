@@ -1,0 +1,7 @@
+#include "Pods-contactsTests-KIF.xcconfig"
+FRAMEWORK_SEARCH_PATHS = ${PODS_CONTACTSTESTS_KIF_FRAMEWORK_SEARCH_PATHS}
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/KIF" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/KIF" "${PODS_ROOT}/Headers/Public/Lela" "${PODS_ROOT}/Headers/Public/Mantle" "${PODS_ROOT}/Headers/Public/OCMock" "${PODS_ROOT}/Headers/Public/OHHTTPStubs" "${PODS_ROOT}/Headers/Public/SVProgressHUD"
+OTHER_CFLAGS = ${PODS_CONTACTSTESTS_KIF_OTHER_CFLAGS}
+OTHER_LDFLAGS = ${PODS_CONTACTSTESTS_KIF_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

@@ -1,0 +1,78 @@
+
+// To check if a library is compiled with CocoaPods you
+// can use the `COCOAPODS` macro definition which is
+// defined in the xcconfigs so it is available in
+// headers also when they are imported in the client
+// project.
+
+
+// Debug build configuration
+#ifdef DEBUG
+
+  // KIF
+  #define COCOAPODS_POD_AVAILABLE_KIF
+  #define COCOAPODS_VERSION_MAJOR_KIF 3
+  #define COCOAPODS_VERSION_MINOR_KIF 2
+  #define COCOAPODS_VERSION_PATCH_KIF 3
+
+  // KIF/XCTest
+  #define COCOAPODS_POD_AVAILABLE_KIF_XCTest
+  #define COCOAPODS_VERSION_MAJOR_KIF_XCTest 3
+  #define COCOAPODS_VERSION_MINOR_KIF_XCTest 2
+  #define COCOAPODS_VERSION_PATCH_KIF_XCTest 3
+
+  // Lela
+  #define COCOAPODS_POD_AVAILABLE_Lela
+  #define COCOAPODS_VERSION_MAJOR_Lela 0
+  #define COCOAPODS_VERSION_MINOR_Lela 2
+  #define COCOAPODS_VERSION_PATCH_Lela 1
+
+  // Lela/XCTest
+  #define COCOAPODS_POD_AVAILABLE_Lela_XCTest
+  #define COCOAPODS_VERSION_MAJOR_Lela_XCTest 0
+  #define COCOAPODS_VERSION_MINOR_Lela_XCTest 2
+  #define COCOAPODS_VERSION_PATCH_Lela_XCTest 1
+
+  // OCMock
+  #define COCOAPODS_POD_AVAILABLE_OCMock
+  #define COCOAPODS_VERSION_MAJOR_OCMock 3
+  #define COCOAPODS_VERSION_MINOR_OCMock 1
+  #define COCOAPODS_VERSION_PATCH_OCMock 3
+
+  // OHHTTPStubs
+  #define COCOAPODS_POD_AVAILABLE_OHHTTPStubs
+  #define COCOAPODS_VERSION_MAJOR_OHHTTPStubs 4
+  #define COCOAPODS_VERSION_MINOR_OHHTTPStubs 2
+  #define COCOAPODS_VERSION_PATCH_OHHTTPStubs 0
+
+  // OHHTTPStubs/Core
+  #define COCOAPODS_POD_AVAILABLE_OHHTTPStubs_Core
+  #define COCOAPODS_VERSION_MAJOR_OHHTTPStubs_Core 4
+  #define COCOAPODS_VERSION_MINOR_OHHTTPStubs_Core 2
+  #define COCOAPODS_VERSION_PATCH_OHHTTPStubs_Core 0
+
+  // OHHTTPStubs/Default
+  #define COCOAPODS_POD_AVAILABLE_OHHTTPStubs_Default
+  #define COCOAPODS_VERSION_MAJOR_OHHTTPStubs_Default 4
+  #define COCOAPODS_VERSION_MINOR_OHHTTPStubs_Default 2
+  #define COCOAPODS_VERSION_PATCH_OHHTTPStubs_Default 0
+
+  // OHHTTPStubs/JSON
+  #define COCOAPODS_POD_AVAILABLE_OHHTTPStubs_JSON
+  #define COCOAPODS_VERSION_MAJOR_OHHTTPStubs_JSON 4
+  #define COCOAPODS_VERSION_MINOR_OHHTTPStubs_JSON 2
+  #define COCOAPODS_VERSION_PATCH_OHHTTPStubs_JSON 0
+
+  // OHHTTPStubs/NSURLSession
+  #define COCOAPODS_POD_AVAILABLE_OHHTTPStubs_NSURLSession
+  #define COCOAPODS_VERSION_MAJOR_OHHTTPStubs_NSURLSession 4
+  #define COCOAPODS_VERSION_MINOR_OHHTTPStubs_NSURLSession 2
+  #define COCOAPODS_VERSION_PATCH_OHHTTPStubs_NSURLSession 0
+
+  // OHHTTPStubs/OHPathHelpers
+  #define COCOAPODS_POD_AVAILABLE_OHHTTPStubs_OHPathHelpers
+  #define COCOAPODS_VERSION_MAJOR_OHHTTPStubs_OHPathHelpers 4
+  #define COCOAPODS_VERSION_MINOR_OHHTTPStubs_OHPathHelpers 2
+  #define COCOAPODS_VERSION_PATCH_OHHTTPStubs_OHPathHelpers 0
+
+#endif

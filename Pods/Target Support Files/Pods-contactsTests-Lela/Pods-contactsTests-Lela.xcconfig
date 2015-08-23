@@ -1,0 +1,3 @@
+PODS_CONTACTSTESTS_LELA_FRAMEWORK_SEARCH_PATHS = $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+PODS_CONTACTSTESTS_LELA_OTHER_CFLAGS = -DKIF_XCTEST
+PODS_CONTACTSTESTS_LELA_OTHER_LDFLAGS = -l"c++" -l"stdc++" -framework "CoreGraphics" -framework "QuartzCore" -framework "UIKit" -framework "XCTest"
