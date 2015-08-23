@@ -1,0 +1,34 @@
+{
+    "contacts": [
+        {
+            "name": "Diego Chohfi Turini",
+            "email": "diego.chohfi@nubank.com.br",
+            "dob": "08/12/1987",
+            "image" : "http://graph.facebook.com/1097564182/picture?width=600&height=600"
+        },
+        {
+            "name": "Lucien Constantino",
+            "email": "lucien.constantino@nubank.com.br",
+            "dob": "21/08/1984",
+            "image" : "http://graph.facebook.com/1795520015/picture?width=600&height=600"
+        },
+        {
+            "name": "Hélio Padrão",
+            "email": "helio.padrao@nubank.com.br",
+            "dob": "02/06/1987",
+            "image" : "http://graph.facebook.com/1213615931/picture?width=600&height=600"
+        },
+        {
+            "name": "Pedro Axelrud",
+            "email": "helio.padrao@nubank.com.br",
+            "dob": "30/11/1990",
+            "image" : "http://graph.facebook.com/672394484/picture?width=600&height=600"
+        },
+        {
+            "name": "Luiz Fernando Dubas",
+            "email": "luiz.dubas@nubank.com.br",
+            "dob": "30/11/1990",
+            "image" : "http://graph.facebook.com/100001164315432/picture?width=600&height=600"
+        },
+    ]
+}

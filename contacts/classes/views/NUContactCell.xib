@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NUContactCell" rowHeight="92" id="uH7-Uy-PEc" customClass="NUContactCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uH7-Uy-PEc" id="ePb-JV-iZg">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diego Chohfi Turini" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="ujN-Yj-kxz">
+                        <rect key="frame" x="92" y="7" width="220" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/12/1987" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yp-yS-mjx">
+                        <rect key="frame" x="92" y="64" width="220" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="diego.chohfi@nubank.com.br" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXY-Or-Xf5">
+                        <rect key="frame" x="92" y="36" width="220" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEK-y5-Ecv">
+                        <rect key="frame" x="8" y="7" width="76" height="75.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="4CD-Ji-OFM"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6yp-yS-mjx" firstAttribute="leading" secondItem="iEK-y5-Ecv" secondAttribute="trailing" constant="8" id="9NO-Eg-97w"/>
+                    <constraint firstItem="iEK-y5-Ecv" firstAttribute="leading" secondItem="ePb-JV-iZg" secondAttribute="leadingMargin" id="EUy-s2-UPA"/>
+                    <constraint firstItem="6yp-yS-mjx" firstAttribute="trailing" secondItem="ePb-JV-iZg" secondAttribute="trailingMargin" id="Hhc-et-ssb"/>
+                    <constraint firstItem="ujN-Yj-kxz" firstAttribute="trailing" secondItem="ePb-JV-iZg" secondAttribute="trailingMargin" id="Opr-5V-YpH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="iEK-y5-Ecv" secondAttribute="bottom" constant="1" id="WeL-B3-1Sl"/>
+                    <constraint firstItem="iEK-y5-Ecv" firstAttribute="top" secondItem="ePb-JV-iZg" secondAttribute="topMargin" constant="-1" id="bUU-eM-gG3"/>
+                    <constraint firstItem="ujN-Yj-kxz" firstAttribute="leading" secondItem="iEK-y5-Ecv" secondAttribute="trailing" constant="8" id="iFn-em-yHo"/>
+                    <constraint firstItem="iEK-y5-Ecv" firstAttribute="bottom" secondItem="6yp-yS-mjx" secondAttribute="bottom" id="mKr-ui-rdX"/>
+                    <constraint firstItem="HXY-Or-Xf5" firstAttribute="centerY" secondItem="iEK-y5-Ecv" secondAttribute="centerY" constant="0.75" id="o5H-RT-fWm"/>
+                    <constraint firstItem="HXY-Or-Xf5" firstAttribute="leading" secondItem="iEK-y5-Ecv" secondAttribute="trailing" constant="8" id="p12-V3-vwa"/>
+                    <constraint firstItem="ujN-Yj-kxz" firstAttribute="top" secondItem="iEK-y5-Ecv" secondAttribute="top" id="ppM-eL-eNk"/>
+                    <constraint firstItem="HXY-Or-Xf5" firstAttribute="trailing" secondItem="ePb-JV-iZg" secondAttribute="trailingMargin" id="uoU-eY-Lou"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageProfile" destination="iEK-y5-Ecv" id="rwe-M1-9Xh"/>
+                <outlet property="labelDayOfBirthday" destination="6yp-yS-mjx" id="smO-SM-9fr"/>
+                <outlet property="labelEmail" destination="HXY-Or-Xf5" id="2WA-uM-bd2"/>
+                <outlet property="labelName" destination="ujN-Yj-kxz" id="Ies-eU-n9Y"/>
+            </connections>
+            <point key="canvasLocation" x="153" y="331"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
