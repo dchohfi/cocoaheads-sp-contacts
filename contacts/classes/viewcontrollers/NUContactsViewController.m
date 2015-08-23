@@ -27,7 +27,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.title = @"Contatos nubank";
+        self.title = @"Contatos Nubank";
     }
     return self;
 }
@@ -88,7 +88,7 @@
     mailComposer.mailComposeDelegate = self;
     [mailComposer setSubject:@"Olar :)"];
     [mailComposer setToRecipients:@[person.email]];
-    [mailComposer setMessageBody:@"\n\n\n\n\nEmail para nubank." isHTML:NO];
+    [mailComposer setMessageBody:@"\n\n\n\n\nEmail para Nubank." isHTML:NO];
     
     [self presentViewController:mailComposer animated:YES completion:nil];
 }
