@@ -32,6 +32,10 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (void)viewDidLoad {
     self.tableView.rowHeight = 92.f;
     self.tableView.accessibilityIdentifier = @"tabela-contatos";
