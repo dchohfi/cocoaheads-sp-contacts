@@ -10,10 +10,10 @@
 #import "NUContactsAPI.h"
 #import "NUPerson.h"
 #import "NUContactCell.h"
+#import "NUContactsController.h"
+#import "NUContactCellViewModel.h"
 
 #import "SVProgressHUD.h"
-#import "MTLJSONAdapter.h"
-#import "UIImageView+AFNetworking.h"
 #import <MessageUI/MFMailComposeViewController.h>
 
 @interface NUContactsViewController()<MFMailComposeViewControllerDelegate>
@@ -53,17 +53,7 @@
     NUPerson *person = self.contacts[indexPath.row];
     NUContactCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NUContactCell"
                                                                forIndexPath:indexPath];
-    
-    cell.labelName.text = person.name;
-    cell.labelEmail.text = person.email;
-    [cell.imageProfile setImageWithURL:person.image];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"dd/MM/yyyy";
-    
-    
-    NSString *dayOfBirthday = [formatter stringFromDate:person.dayOfBirthday];
-    cell.labelDayOfBirthday.text = dayOfBirthday;
+    cell.viewModel = [[NUContactCellViewModel alloc] initWithContact:person];
     
     return cell;
 }
@@ -96,20 +86,16 @@
 - (void)loadContacts {
     self.contacts = [[NSArray alloc] init];
     [SVProgressHUD showWithStatus:@"Carregando contatos"];
-    [[NUContactsAPI sharedAPI] GET:@"people.json"
-                        parameters:nil
-                           success:^(NSURLSessionDataTask *task, id responseObject) {
-                               [SVProgressHUD showSuccessWithStatus:@"Contatos carregados :)"];
-                               NSArray *contactsData = responseObject[@"contacts"];
-                               
-                               self.contacts = [MTLJSONAdapter modelsOfClass:[NUPerson class]
-                                                               fromJSONArray:contactsData
-                                                                       error:nil];
-                               [self.refreshControl endRefreshing];
-                           } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                               [SVProgressHUD showErrorWithStatus:@"Ops, tivemos um problema :("];
-                               [self.refreshControl endRefreshing];
-                           }];
+    [NUContactsController getContactsWithBlock:^(NSArray *contacts, NSError *error){
+        [self.refreshControl endRefreshing];
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:@"Ops, tivemos um problema :("];
+            return;
+        }
+        [SVProgressHUD showSuccessWithStatus:@"Contatos carregados :)"];
+        
+        self.contacts = contacts;
+    }];
 }
 
 #pragma mark - getter/setter

@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class NUContactCellViewModel;
+
 @interface NUContactCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageProfile;
-@property (weak, nonatomic) IBOutlet UILabel *labelName;
-@property (weak, nonatomic) IBOutlet UILabel *labelEmail;
-@property (weak, nonatomic) IBOutlet UILabel *labelDayOfBirthday;
+@property (nonatomic, strong) NUContactCellViewModel *viewModel;
 
 @end

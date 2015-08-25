@@ -27,7 +27,7 @@
         formatter.dateFormat = @"dd/MM/yyyy";
     });
 
-    return [MTLValueTransformer transformerUsingForwardBlock:^NSDate *(NSString *value, BOOL *success, NSError *__autoreleasing *error) {
+    return [MTLValueTransformer transformerUsingForwardBlock:^NSDate *(NSString *value, BOOL *success, NSError **error) {
         return [formatter dateFromString:value];
     } reverseBlock:^NSString *(NSDate *date, BOOL *success, NSError *__autoreleasing *error) {
         return [formatter stringFromDate:date];

@@ -18,6 +18,14 @@
 		20F8A73A1B8A736E00316821 /* NUContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7391B8A736E00316821 /* NUContactCell.m */; };
 		20F8A73C1B8A737900316821 /* NUContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F8A73B1B8A737900316821 /* NUContactCell.xib */; };
 		20F8A7401B8A89CC00316821 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F8A73F1B8A89CC00316821 /* MessageUI.framework */; };
+		20F8A7431B8BF50F00316821 /* NUContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7421B8BF50F00316821 /* NUContactsController.m */; };
+		20F8A7481B8BFF0A00316821 /* NUModelConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7471B8BFF0A00316821 /* NUModelConverter.m */; };
+		20F8A74A1B8C02D600316821 /* NUPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7491B8C02D600316821 /* NUPersonTests.m */; };
+		20F8A74D1B8C09CD00316821 /* NUContactsControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A74C1B8C09CD00316821 /* NUContactsControllerTests.m */; };
+		20F8A74F1B8C154900316821 /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 20F8A74E1B8C154900316821 /* people.json */; };
+		20F8A7531B8C1AF300316821 /* NUContactCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7521B8C1AF300316821 /* NUContactCellViewModel.m */; };
+		20F8A7551B8C1CF000316821 /* NUContactCellViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7541B8C1CF000316821 /* NUContactCellViewModelTests.m */; };
+		20FCC5A51B8CEC2200FE99AC /* NUContactsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FCC5A41B8CEC2200FE99AC /* NUContactsViewControllerTests.m */; };
 		EB465894594387D7BC8A654F /* libPods-contactsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B125C9A8E3407D247898EC /* libPods-contactsTests.a */; };
 		F8F3A805F71D7D47512C85DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C96837F4F000F50BEC6A4F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +62,18 @@
 		20F8A73B1B8A737900316821 /* NUContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NUContactCell.xib; sourceTree = "<group>"; };
 		20F8A73D1B8A89C600316821 /* libAWDProtobufFacetimeiMessage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufFacetimeiMessage.dylib; path = usr/lib/libAWDProtobufFacetimeiMessage.dylib; sourceTree = SDKROOT; };
 		20F8A73F1B8A89CC00316821 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		20F8A7411B8BF50F00316821 /* NUContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUContactsController.h; sourceTree = "<group>"; };
+		20F8A7421B8BF50F00316821 /* NUContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactsController.m; sourceTree = "<group>"; };
+		20F8A7441B8BF52700316821 /* NUBlocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NUBlocks.h; sourceTree = "<group>"; };
+		20F8A7461B8BFF0A00316821 /* NUModelConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUModelConverter.h; sourceTree = "<group>"; };
+		20F8A7471B8BFF0A00316821 /* NUModelConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUModelConverter.m; sourceTree = "<group>"; };
+		20F8A7491B8C02D600316821 /* NUPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUPersonTests.m; sourceTree = "<group>"; };
+		20F8A74C1B8C09CD00316821 /* NUContactsControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactsControllerTests.m; sourceTree = "<group>"; };
+		20F8A74E1B8C154900316821 /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = SOURCE_ROOT; };
+		20F8A7511B8C1AF300316821 /* NUContactCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUContactCellViewModel.h; sourceTree = "<group>"; };
+		20F8A7521B8C1AF300316821 /* NUContactCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactCellViewModel.m; sourceTree = "<group>"; };
+		20F8A7541B8C1CF000316821 /* NUContactCellViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactCellViewModelTests.m; sourceTree = "<group>"; };
+		20FCC5A41B8CEC2200FE99AC /* NUContactsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactsViewControllerTests.m; sourceTree = "<group>"; };
 		30C96837F4F000F50BEC6A4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5960EA84FC5689006AB3FE74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6EB7B13660097CFBB9285BA4 /* Pods-contactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactsTests/Pods-contactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +146,11 @@
 		20F8A70D1B8A674000316821 /* contactsTests */ = {
 			isa = PBXGroup;
 			children = (
+				20F8A74E1B8C154900316821 /* people.json */,
+				20F8A7491B8C02D600316821 /* NUPersonTests.m */,
+				20F8A74C1B8C09CD00316821 /* NUContactsControllerTests.m */,
+				20F8A7541B8C1CF000316821 /* NUContactCellViewModelTests.m */,
+				20FCC5A41B8CEC2200FE99AC /* NUContactsViewControllerTests.m */,
 				20F8A7101B8A674000316821 /* contactsTests.m */,
 				20F8A70E1B8A674000316821 /* Supporting Files */,
 			);
@@ -147,6 +172,7 @@
 				20F8A71E1B8A695000316821 /* controllers */,
 				20F8A71F1B8A695000316821 /* models */,
 				20F8A7201B8A695000316821 /* viewcontrollers */,
+				20F8A7501B8C1AE300316821 /* viewmodels */,
 				20F8A7221B8A695000316821 /* views */,
 			);
 			path = classes;
@@ -165,6 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				20F8A7271B8A697D00316821 /* api */,
+				20F8A7441B8BF52700316821 /* NUBlocks.h */,
+				20F8A7411B8BF50F00316821 /* NUContactsController.h */,
+				20F8A7421B8BF50F00316821 /* NUContactsController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -172,6 +201,7 @@
 		20F8A71F1B8A695000316821 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				20F8A7451B8BFEEE00316821 /* converters */,
 				20F8A7351B8A6F8900316821 /* NUPerson.h */,
 				20F8A7361B8A6F8900316821 /* NUPerson.m */,
 			);
@@ -204,6 +234,24 @@
 				20F8A7331B8A6AD500316821 /* NUContactsAPI.m */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		20F8A7451B8BFEEE00316821 /* converters */ = {
+			isa = PBXGroup;
+			children = (
+				20F8A7461B8BFF0A00316821 /* NUModelConverter.h */,
+				20F8A7471B8BFF0A00316821 /* NUModelConverter.m */,
+			);
+			path = converters;
+			sourceTree = "<group>";
+		};
+		20F8A7501B8C1AE300316821 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				20F8A7511B8C1AF300316821 /* NUContactCellViewModel.h */,
+				20F8A7521B8C1AF300316821 /* NUContactCellViewModel.m */,
+			);
+			path = viewmodels;
 			sourceTree = "<group>";
 		};
 		74CBE2197A584C7EBF722443 /* Frameworks */ = {
@@ -323,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F8A74F1B8C154900316821 /* people.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,11 +446,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F8A7231B8A695000316821 /* AppDelegate.m in Sources */,
+				20F8A7481B8BFF0A00316821 /* NUModelConverter.m in Sources */,
 				20F8A73A1B8A736E00316821 /* NUContactCell.m in Sources */,
 				20F8A6F71B8A674000316821 /* main.m in Sources */,
 				20F8A7371B8A6F8900316821 /* NUPerson.m in Sources */,
 				20F8A7341B8A6AD500316821 /* NUContactsAPI.m in Sources */,
+				20F8A7531B8C1AF300316821 /* NUContactCellViewModel.m in Sources */,
 				20F8A72E1B8A6AB100316821 /* NUContactsViewController.m in Sources */,
+				20F8A7431B8BF50F00316821 /* NUContactsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +462,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F8A7111B8A674000316821 /* contactsTests.m in Sources */,
+				20F8A74A1B8C02D600316821 /* NUPersonTests.m in Sources */,
+				20F8A7551B8C1CF000316821 /* NUContactCellViewModelTests.m in Sources */,
+				20F8A74D1B8C09CD00316821 /* NUContactsControllerTests.m in Sources */,
+				20FCC5A51B8CEC2200FE99AC /* NUContactsViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
