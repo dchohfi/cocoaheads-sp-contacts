@@ -34,6 +34,7 @@
 
 - (void)viewDidLoad {
     self.tableView.rowHeight = 92.f;
+    self.tableView.accessibilityIdentifier = @"tabela-contatos";
     [self.tableView registerNib:[UINib nibWithNibName:@"NUContactCell" bundle:nil]
          forCellReuseIdentifier:@"NUContactCell"];
     

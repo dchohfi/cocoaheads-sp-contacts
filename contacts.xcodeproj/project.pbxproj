@@ -26,6 +26,8 @@
 		20F8A7531B8C1AF300316821 /* NUContactCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7521B8C1AF300316821 /* NUContactCellViewModel.m */; };
 		20F8A7551B8C1CF000316821 /* NUContactCellViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F8A7541B8C1CF000316821 /* NUContactCellViewModelTests.m */; };
 		20FCC5A51B8CEC2200FE99AC /* NUContactsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FCC5A41B8CEC2200FE99AC /* NUContactsViewControllerTests.m */; };
+		20FCC5AA1B8CFD2E00FE99AC /* NUContactsFunctionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FCC5A91B8CFD2E00FE99AC /* NUContactsFunctionalTests.m */; };
+		20FCC5AD1B8D096200FE99AC /* KIFUITestActor+NUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FCC5AC1B8D096200FE99AC /* KIFUITestActor+NUAdditions.m */; };
 		EB465894594387D7BC8A654F /* libPods-contactsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B125C9A8E3407D247898EC /* libPods-contactsTests.a */; };
 		F8F3A805F71D7D47512C85DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C96837F4F000F50BEC6A4F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,9 @@
 		20F8A7521B8C1AF300316821 /* NUContactCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactCellViewModel.m; sourceTree = "<group>"; };
 		20F8A7541B8C1CF000316821 /* NUContactCellViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactCellViewModelTests.m; sourceTree = "<group>"; };
 		20FCC5A41B8CEC2200FE99AC /* NUContactsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactsViewControllerTests.m; sourceTree = "<group>"; };
+		20FCC5A91B8CFD2E00FE99AC /* NUContactsFunctionalTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUContactsFunctionalTests.m; sourceTree = "<group>"; };
+		20FCC5AB1B8D096200FE99AC /* KIFUITestActor+NUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFUITestActor+NUAdditions.h"; sourceTree = "<group>"; };
+		20FCC5AC1B8D096200FE99AC /* KIFUITestActor+NUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFUITestActor+NUAdditions.m"; sourceTree = "<group>"; };
 		30C96837F4F000F50BEC6A4F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5960EA84FC5689006AB3FE74 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6EB7B13660097CFBB9285BA4 /* Pods-contactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contactsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-contactsTests/Pods-contactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,11 +153,14 @@
 			children = (
 				20F8A74E1B8C154900316821 /* people.json */,
 				20F8A7491B8C02D600316821 /* NUPersonTests.m */,
+				20FCC5A91B8CFD2E00FE99AC /* NUContactsFunctionalTests.m */,
 				20F8A74C1B8C09CD00316821 /* NUContactsControllerTests.m */,
 				20F8A7541B8C1CF000316821 /* NUContactCellViewModelTests.m */,
 				20FCC5A41B8CEC2200FE99AC /* NUContactsViewControllerTests.m */,
 				20F8A7101B8A674000316821 /* contactsTests.m */,
 				20F8A70E1B8A674000316821 /* Supporting Files */,
+				20FCC5AB1B8D096200FE99AC /* KIFUITestActor+NUAdditions.h */,
+				20FCC5AC1B8D096200FE99AC /* KIFUITestActor+NUAdditions.m */,
 			);
 			path = contactsTests;
 			sourceTree = "<group>";
@@ -461,10 +469,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FCC5AD1B8D096200FE99AC /* KIFUITestActor+NUAdditions.m in Sources */,
 				20F8A7111B8A674000316821 /* contactsTests.m in Sources */,
 				20F8A74A1B8C02D600316821 /* NUPersonTests.m in Sources */,
 				20F8A7551B8C1CF000316821 /* NUContactCellViewModelTests.m in Sources */,
 				20F8A74D1B8C09CD00316821 /* NUContactsControllerTests.m in Sources */,
+				20FCC5AA1B8CFD2E00FE99AC /* NUContactsFunctionalTests.m in Sources */,
 				20FCC5A51B8CEC2200FE99AC /* NUContactsViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
